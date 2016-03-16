@@ -1,0 +1,29 @@
+\chapter{Pre-processing Data}
+In this project, we have output data from quartus OpenCL compiler for three benchmarks: dfadd, dfsin and dfmul. Table \ref{table:benchmark_record} shows the number of data records for each benchmark.
+
+\begin{table}[h!]
+\centering
+ \begin{tabular}{|c|c|} 
+ \hline
+ Benchmark & Record Count \\ [0.5ex] 
+ \hline\hline
+ dfmul & 20 \\ 
+ \hline
+ dfsin & 30 \\ 
+ \hline
+ dfadd & 48 \\ [1ex] 
+ \hline
+\end{tabular}
+\caption{Data set information}
+\label{table:benchmark_record}
+\end{table}
+
+The data records for each benchmark are combined into a single csv file.
+
+data\_formatter.py is written to consolidate the individual output data file from quartus OpenCL compiler into a single csv file. The command line interface is as follows:
+
+\begin{minted}
+{shell}
+python data_formatter.py <input folder name> <output file name>
+\end{minted}
+
