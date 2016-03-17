@@ -1,5 +1,7 @@
 \chapter{Machine Learning}
-In this project, we picked 8 models. They are:
+
+\section{Algorithms}
+In this project, we picked 8 type of classifiers. They are:
 \begin{enumerate}
     \item RandomForest
         \begin{itemize}
@@ -32,5 +34,24 @@ In this project, we picked 8 models. They are:
     \item NeuralNetwork
         \begin{itemize}
             \item Neural Network
+        \end{itemize}
+\end{enumerate}
+
+\section{Program Flow}
+
+The flow of the program is structured as follows:
+
+\begin{enumerate}
+    \item Converting numerical response into categorical data
+        \begin{itemize}
+            \item Classifiers required a class label to classify based on the input (features). Thus for all the seven output metrics, the numeric data are classified into binary class 0 or 1 with 1 representing the numeric data is greater than median. Otherwise, 0. 
+        \end{itemize}
+    \item Validating Models
+        \begin{itemize}
+            \item K-fold cross validation method is used to validate models and also to limit the overfitting problems.
+        \end{itemize}
+    \item Generate ROC curve and AUC charts
+        \begin{itemize}
+            \item ROC curve and AUC charts are then plotted to be used in evaluating the performance of the classifiers.
         \end{itemize}
 \end{enumerate}
