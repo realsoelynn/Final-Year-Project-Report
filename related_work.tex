@@ -1,0 +1,22 @@
+\chapter{Related Work}
+In  this  chapter,  we  will  look  at   related  research  papers. 
+
+\cite{kapre2015driving} proposed a machine learning approach to optimize the FPGA CAD tool parameters. Firstly, an initial round of tuning parameters were generated and used it to execute CAD runs on the cloud. A database of FPGA CAD tool parameters (features) along with the associated negative time slack (TNS) (output) to start the learning process. A predictive model then constructed by learning from the inital seed data to predict the TNS. The results would be fed into the machine learning engine to refine the model. This is done iteratively until the TNS of the design converged to meet the requirements.
+
+CHO benchmark suite \citep{ndu2015cho} is an extension of CHStone which is the defacto standard for benchmarking HLS framework. The kernels in CHO are ideal for benchmarking HLS frameworks targeted at FPGAs. The applications in CHO benchmark suite are as follows:
+
+\begin{enumerate}
+    \item dfadd
+    \item dfdiv
+    \item dfmul
+    \item dfsin
+    \item adpcm
+    \item gsm
+    \item jpeg
+    \item motion
+    \item aes
+    \item blowfish
+    \item sha
+    \item MIPS
+\end{enumerate}
+
