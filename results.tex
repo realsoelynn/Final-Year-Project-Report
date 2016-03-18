@@ -12,15 +12,6 @@ In this project, we have total of seven metrics that we wanted to classify using
 
 Figure \ref{figure:ALUTs_auc_plot} showed the AUC score for all algorithms that are used to classify ALUTs. Performance variations can be seen clearly. NeuralNetwork classifier has the highest average AUC score of 0.963. ExtraTrees achieved the average AUC score of 0.57 which is the lowest among the eight classifiers and it is followed by SGDClassifier. The reason why SGDClassifier performed poorly is because the data are not linearly separable. Most impressive fact is that RandomForest performed better than ExtraTrees even though ExtraTrees is expected to perform better due to its true more randomness. This happened due to the fact that the data sets and the number of features are relatively small. With the increase of data sets, ExtraTrees should perform better than RandomForest.
 
-\section{Classification of Kernel Fmax}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=0.3]{KernelFmax_auc_plot.png}
-\caption{AUC bar chart for Kernel Fmax}
-\label{figure:kernelfmax_auc_plot}
-\end{figure}
-
 \section{Classification of Logic Utilization}
 
 \begin{figure}[h!]
@@ -30,14 +21,7 @@ Figure \ref{figure:ALUTs_auc_plot} showed the AUC score for all algorithms that 
 \label{figure:LogicUtilization_auc_plot}
 \end{figure}
 
-\section{Classification of RAM Blocks}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=0.3]{RAMBlocks_auc_plot.png}
-\caption{AUC bar chart for RAM Blocks}
-\label{figure:RAMBlocks_auc_plot}
-\end{figure}
+Figure \ref{figure:LogicUtilization_auc_plot} shows the AUC score for all algorithms that are used to classify Logic Utilization. NeuralNetwork classifier performed very well for the classification of Logic Utilization with the average score of 0.96. The performance of all the eight classifiers are similar to the performance in classification of ALUTs.
 
 \section{Classification of DSP Blocks}
 
@@ -60,12 +44,32 @@ Figure \ref{figure:dsp_auc_plot} showed the AUC score for all algorithms that ar
 \label{figure:MemoryBits_auc_plot}
 \end{figure}
 
-\section{Classification of Registers}
+Figure \ref{figure:MemoryBits_auc_plot} shows the AUC score for all algorithms that are used to classify Memory Bits. Similar pattern to the classification of ALUTs can be found in this as well. NeuralNetwork classifier
+
+\secddddtion{Classification of Registers}
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.3]{Registers_auc_plot.png}
 \caption{AUC bar chart for Registers}
 \label{figure:Registers_auc_plot}
+\end{figure}
+
+\section{Classification of RAM Blocks}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.3]{RAMBlocks_auc_plot.png}
+\caption{AUC bar chart for RAM Blocks}
+\label{figure:RAMBlocks_auc_plot}
+\end{figure}
+
+\section{Classification of Kernel Fmax}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.3]{KernelFmax_auc_plot.png}
+\caption{AUC bar chart for Kernel Fmax}
+\label{figure:kernelfmax_auc_plot}
 \end{figure}
 
 \begin{figure}[h!]
