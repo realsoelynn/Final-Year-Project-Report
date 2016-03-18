@@ -1,6 +1,41 @@
 \chapter{Results}
 
-In this project, we have total of seven metrics that we wanted to classify using machine learning model. The results are analysed for individual metrics.
+In this project, we have total of seven metrics that we wanted to classify using machine learning model. The seven metrics are
+
+\begin{enumerate}
+    \item ALUTs
+    \item DSP Blocks
+    \item Logic Utilization
+    \item Memory Bits
+    \item Registers
+    \item Kernel Fmax
+    \item RAM Blocks
+\end{enumerate}
+
+The following three figures, Figure \ref{figure:dfsin_roc_curve}, \ref{figure:dfmul_roc_curve} and \ref{figure:dfadd_roc_curve}, showed the ROC curve of all algorithms on how they performed for the metric classifications in each benchmark.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{dfsin_roc_curve.png}
+\caption{ROC curve for dfsin benchmarks}
+\label{figure:dfsin_roc_curve}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{dfmul_roc_curve.png}
+\caption{ROC curve for dfmul benchmarks}
+\label{figure:dfmul_roc_curve}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{dfadd_roc_curve.png}
+\caption{ROC curve for dfadd benchmarks}
+\label{figure:dfadd_roc_curve}
+\end{figure}
+
+The results are analysed for individual metrics. To get clearer analysis, AUC score will be used to compare the performance of the classifiers in each classification.
 
 \section{Classification of ALUTS}
 \begin{figure}[h!]
@@ -21,7 +56,7 @@ Figure \ref{figure:ALUTs_auc_plot} showed the AUC score for all algorithms that 
 \label{figure:LogicUtilization_auc_plot}
 \end{figure}
 
-Figure \ref{figure:LogicUtilization_auc_plot} shows the AUC score for all algorithms that are used to classify Logic Utilization. NeuralNetwork classifier performed very well for the classification of Logic Utilization with the average score of 0.96. The performance of all the eight classifiers are similar to the performance in classification of ALUTs.
+Figure \ref{figure:LogicUtilization_auc_plot} showed the AUC score for all algorithms that are used to classify Logic Utilization. NeuralNetwork classifier performed very well for the classification of Logic Utilization with the average score of 0.96. The performance of all the eight classifiers are similar to the performance in classification of ALUTs.
 
 \section{Classification of DSP Blocks}
 
@@ -44,15 +79,17 @@ Figure \ref{figure:dsp_auc_plot} showed the AUC score for all algorithms that ar
 \label{figure:MemoryBits_auc_plot}
 \end{figure}
 
-Figure \ref{figure:MemoryBits_auc_plot} shows the AUC score for all algorithms that are used to classify Memory Bits. Similar pattern to the classification of ALUTs can be found in this as well. NeuralNetwork classifier
+Figure \ref{figure:MemoryBits_auc_plot} showed the AUC score for all algorithms that are used to classify Memory Bits. Similar pattern to the classification of ALUTs can be found in this as well. NeuralNetwork classifier scored the average AUC score of 0.92. NaiveBayes, LogicBoosting, SVC, Bagging and SGDClassifier performed consistent as the same with the classification of ALUTs, Logic Utilization, DSP Bloacks and Memory Bits.
 
-\secddddtion{Classification of Registers}
+\section{Classification of Registers}
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.3]{Registers_auc_plot.png}
 \caption{AUC bar chart for Registers}
 \label{figure:Registers_auc_plot}
 \end{figure}
+
+Figure \ref{figure:Registers_auc_plot} showed the AUC score for all algorithms that are used to classify Registers. The same pattern arised in the classification of Registers compared with the aforementioned results. NeuralNetork scored the highest with the average AUC of 0.92.
 
 \section{Classification of RAM Blocks}
 
@@ -63,6 +100,8 @@ Figure \ref{figure:MemoryBits_auc_plot} shows the AUC score for all algorithms t
 \label{figure:RAMBlocks_auc_plot}
 \end{figure}
 
+Figure \ref{figure:RAMBlocks_auc_plot} showed the AUC score for all algorithms that are used to classify RAM Blocks. In this classification, NeuralNetwork was topped by Bagging and LogitBoosting classifiers. The average AUC score for Bagging and LogitBoosting classifiers are 0.98 and 0.95 respectively.
+
 \section{Classification of Kernel Fmax}
 
 \begin{figure}[h!]
@@ -72,23 +111,4 @@ Figure \ref{figure:MemoryBits_auc_plot} shows the AUC score for all algorithms t
 \label{figure:kernelfmax_auc_plot}
 \end{figure}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=0.4]{dfsin_roc_curve.png}
-\caption{ROC curve for dfsin benchmarks}
-\label{figure:dfsin_roc_curve}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=0.4]{dfmul_roc_curve.png}
-\caption{ROC curve for dfmul benchmarks}
-\label{figure:dfmul_roc_curve}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=0.4]{dfadd_roc_curve.png}
-\caption{ROC curve for dfadd benchmarks}
-\label{figure:dfadd_roc_curve}
-\end{figure}
+Figure \ref{figure:kernelfmax_auc_plot} showed the AUC score for all algorithms that are sued to classify Kernel Fmax. In this classification, RandomForest and ExtraTress classifier performed the same though we have seen that RandomForest performed better in the previous six classifications. Bagging and LogitBoosting performed the same in this classification with the average AUC score of 0.95.

@@ -5,35 +5,36 @@ In this project, we picked 8 type of classifiers. They are:
 \begin{enumerate}
     \item RandomForest
         \begin{itemize}
-            \item Random Forest classifier is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and use averaging to improve the predictive accuracy and control over-fitting.
+            \item Random Forest classifier is a tree based model and it operates by constructing multiple decision trees during training. It corrects the overfitting problem of decision trees.
         \end{itemize}
     \item ExtraTrees
         \begin{itemize}
-            \item  The main difference is that when at each node RandomForest chooses the best cutting threshold for the feature, ExtraTrees instead chooses the cut (uniformly) randomly. Similarly to RandomForest the feature with the biggest gain (or best score) is chosen after the cutting threshold has been fixed.
+            \item  
+            ExtraTress is an Extremely Randomized Trees. The difference between ExtraTrees and RandomForest is that ExtraTrees goes one step further in the splitting are carried out. In RandomForest, random group of features is used, but instead of filtering out by the thresholds, the thresholds are randomly drawn for each candidate feature and the best thresholds among the randomly-generated ones is picked as the splitting rule. But, this reduce the variance of the model with a slight increase in bias.
         \end{itemize}
     \item NaiveBayes
         \begin{itemize}
-            \item Naive Bayes methods are a set of supervised learning algorithms based on applying Bayes’ theorem with the “naive” assumption of independence between every pair of features.
+            \item Naive Bayes classifiers is a type of probabilistics classifiers based on Bayes' theorem. 
         \end{itemize}
     \item LogitBoosting
         \begin{itemize}
-            \item LogitBoosting is an addictive, boosted model that seeks to minimize logistic errors.
+            \item LogitBoosting is an addictive, boosted model that tries to reduce logistic errors.
         \end{itemize}
     \item SVM
         \begin{itemize}
-            \item Support vector machines is a discriminative classifier formally defined by a separating hyperplane. The operation of the SVM algorithm is based on finding the hyperplane that gives the largest minimum distance to the training examples.
+            \item Support vector machines (SVM) separates the positive class from the negative one by a separating hyperplane by maximizing distance between them. If data points are not directly separable, a higher dimension space would be used to transform the data points where such separation is possible.
         \end{itemize}
     \item Bagging
         \begin{itemize}
-            \item A Bagging classifier is an ensemble meta-estimator that fits base classifiers each on random subsets of the original dataset and then aggregate their individual predictions (either by voting or by averaging) to form a final prediction. Such a meta-estimator can typically be used as a way to reduce the variance of a black-box estimator (e.g., a decision tree), by introducing randomization into its construction procedure and then making an ensemble out of it.
+            \item Bagging stands for Bootstrap Aggregation. Bagging averages over the predictions of all models. It fits base classifiers on each random subsets of the original data set and aggregate the individual predictions to form a final prediction.
         \end{itemize}
     \item SGDClassifier
         \begin{itemize}
-            \item Linear classifiers (SVM, logistic regression, a.o.) with SGD training. This estimator implements regularized linear models with stochastic gradient descent (SGD) learning: the gradient of the loss is estimated each sample at a time and the model is updated along the way with a decreasing strength schedule (aka learning rate). SGD allows minibatch (online/out-of-core) learning, see the partial\_fit method. For best results using the default learning rate schedule, the data should have zero mean and unit variance.
+            \item SGDClassifier is a linear classifier with stochastic gradient descent (GD) learning. 
         \end{itemize}
     \item NeuralNetwork
         \begin{itemize}
-            \item Neural Network
+            \item Neural Network is a classifier that mimics human brains. In this project, we have input layer and output layer. Input layer comprised of 5 neurons and a single neuron for the output layer.
         \end{itemize}
 \end{enumerate}
 
