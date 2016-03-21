@@ -14,7 +14,7 @@ In this project, we picked 8 type of classifiers. They are:
         \end{itemize}
     \item NaiveBayes
         \begin{itemize}
-            \item Naive Bayes classifiers is a type of probabilistics classifiers based on Bayes' theorem. 
+            \item Naive Bayes classifiers is a type of probabilistic classifiers based on Bayes' theorem. 
         \end{itemize}
     \item LogitBoosting
         \begin{itemize}
@@ -56,3 +56,5 @@ The flow of the program is structured as follows:
             \item ROC curve and AUC charts are then plotted to be used in evaluating the performance of the classifiers.
         \end{itemize}
 \end{enumerate}
+
+Overall program flow is as follows. For each fold of the training and test dataset, each model is fitted and then the various evaluation metrics such as TPR, FPR and AUC are saved into json file. After training and testing of models are done for all folds of data, ROC curve and AUC charts are plotted.
